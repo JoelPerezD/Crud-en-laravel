@@ -18,9 +18,13 @@ class CreateClientsTable extends Migration
             $table->bigIncrements('id');
             $table->string('RazonSocial');
             $table->string('Giro');
-            $table->string('Ciudad');
+            $table->string('Telefono');
+            $table->string('Direccion');
             $table->string('Zona');
+            $table->string('Ciudad');
+            $table->string('Estado');
             $table->string('Contacto');
+            $table->string('Correo');
             $table->timestamps();
         });
     }

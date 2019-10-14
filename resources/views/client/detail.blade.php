@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="form-group">
-          <strong>Razon Social : </strong> {{$client->RazonSocial}}
+          <strong>Empresa : </strong> {{$client->RazonSocial}}
         </div>
       </div>
       <div class="col-md-12">
@@ -18,9 +18,15 @@
           <strong>Giro : </strong> {{$client->Giro}}
         </div>
       </div>
+  
       <div class="col-md-12">
         <div class="form-group">
-          <strong>Ciudad : </strong> {{$client->Ciudad}}
+          <strong>Telefono : </strong> {{$client->Telefono}}
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <strong>Direccion : </strong> {{$client->Direccion}}
         </div>
       </div>
       <div class="col-md-12">
@@ -28,9 +34,29 @@
           <strong>Zona : </strong> {{$client->Zona}}
         </div>
       </div>
+     
+       
+      <div class="col-md-12">
+        <div class="form-group">
+          <strong>Ciudad : </strong> {{$client->Ciudad}}
+        </div>
+      </div>
+      
+      <div class="col-md-12">
+        <div class="form-group">
+          <strong>Estado : </strong> {{$client->Estado}}
+        </div>
+      </div>
+
       <div class="col-md-12">
         <div class="form-group">
           <strong>Contacto : </strong> {{$client->Contacto}}
+        </div>
+      </div>
+    
+      <div class="col-md-12">
+        <div class="form-group">
+          <strong>Correo : </strong> {{$client->Correo}}
         </div>
       </div>
       <div class="col-md-12">

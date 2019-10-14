@@ -22,26 +22,50 @@
       @csrf
       @method('PUT')
       <div class="row">
+        
         <div class="col-md-12">
-          <strong>Razon Social :</strong>
+          <strong>Empresa :</strong>
           <input type="text" name="RazonSocial" class="form-control" value="{{$client ->RazonSocial}}">
         </div>
+        
         <div class="col-md-12">
           <strong>Giro:</strong>
           <input type="text" name="Giro" class="form-control" value="{{$client ->Giro}}">
-         <!-- <textarea class="form-control" name="Giro" rows="8" cols="80">{{$client ->Giro}}</textarea> -->
         </div>
+
         <div class="col-md-12">
-          <strong>Ciudad :</strong>
-          <input type="text" name="Ciudad" class="form-control" value="{{$client ->Ciudad}}">
+          <strong>Telefono :</strong>
+          <input type="text" name="Telefono" class="form-control" value="{{$client ->Telefono}}">
         </div>
+
+        <div class="col-md-12">
+          <strong>Direccion :</strong>
+          <input type="text" name="Direccion" class="form-control" value="{{$client ->Direccion}}">
+        </div>
+
         <div class="col-md-12">
           <strong>Zona :</strong>
           <input type="text" name="Zona" class="form-control" value="{{$client ->Zona}}">
         </div>
+        
         <div class="col-md-12">
-          <strong>Contactos :</strong>
+          <strong>Ciudad :</strong>
+          <input type="text" name="Ciudad" class="form-control" value="{{$client ->Ciudad}}">
+        </div>
+        
+        <div class="col-md-12">
+          <strong>Estado :</strong>
+          <input type="text" name="Estado" class="form-control" value="{{$client ->Estado}}">
+        </div>
+        
+        <div class="col-md-12">
+          <strong>Contacto :</strong>
           <input type="text" name="Contacto" class="form-control" value="{{$client ->Contacto}}">
+        </div>
+        
+        <div class="col-md-12">
+          <strong>Correo :</strong>
+          <input type="text" name="Correo" class="form-control" value="{{$client ->Correo}}">
         </div>
         <div class="col-md-12">
           <a href="{{route('client.index')}}" class="btn btn-sm btn-success">Regresar</a>

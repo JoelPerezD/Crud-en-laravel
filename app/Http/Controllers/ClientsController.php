@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Client;
-
 class ClientsController extends Controller
 {
    /**
@@ -14,9 +11,9 @@ class ClientsController extends Controller
      */
     public function index()
     {
-        $clients = Client::latest()->paginate(5);
+        $clients = Client::latest()->paginate(100);
         return view('client.index', compact('clients'))
-                  ->with('i', (request()->input('page',1) -1)*5);
+                  ->with('i', (request()->input('page',1) -1)*100);
     }
     /**
      * Show the form for creating a new resource.
@@ -38,13 +35,17 @@ class ClientsController extends Controller
         $request->validate([
             'RazonSocial' => 'required',
             'Giro' => 'required',
-            'Ciudad' => 'required',
+            'Telefono' => 'required',
+            'Direccion' => 'required',
             'Zona' => 'required',
-            'Contacto' => 'required'
+            'Ciudad' => 'required',
+            'Estado' => 'required',
+            'Contacto' => 'required',
+            'Correo' => 'required'
           ]);
         Client::create($request->all());
         return redirect()->route('client.index')
-                        ->with('success', 'new biodata created successfully');
+                        ->with('success', 'Se ha agregado cliente');
     }
     /**
      * Display the specified resource.
@@ -87,9 +88,13 @@ class ClientsController extends Controller
       $client = Client::find($id);
       $client->RazonSocial = $request->get('RazonSocial');
       $client->Giro = $request->get('Giro');
-      $client->Ciudad = $request->get('Ciudad');
+      $client->Telefono = $request->get('Telefono');
+      $client->Direccion = $request->get('Direccion');
       $client->Zona = $request->get('Zona');
+      $client->Ciudad = $request->get('Ciudad');
+      $client->Estado = $request->get('Estado');
       $client->Contacto = $request->get('Contacto');
+      $client->Correo = $request->get('Correo');
       $client->save();
       return redirect()->route('client.index')
                       ->with('success', 'Cliente se ha actualizado exitosamente');

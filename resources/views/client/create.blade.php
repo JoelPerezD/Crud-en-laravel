@@ -22,29 +22,42 @@
       @csrf
       <div class="row">
         <div class="col-md-12">
-          <strong>Razon Social :</strong>
-          <input type="text" name="RazonSocial" class="form-control" placeholder="Razon Social">
+          <strong>Empresa :</strong>
+          <input type="text" name="RazonSocial" class="form-control" placeholder="Empresa">
         </div>
         <div class="col-md-12">
           <strong>Giro :</strong>
           <input type="text" name="Giro" class="form-control" placeholder="Giro">
         </div>
         <div class="col-md-12">
-          <strong>Ciudad :</strong>
-          <input type="text" name="Ciudad" class="form-control" placeholder="Ciudad">
+          <strong>Telefono :</strong>
+          <input type="text" name="Telefono" class="form-control" placeholder="Telefono">
+        </div>
+        <div class="col-md-12">
+          <strong>Direccion :</strong>
+          <input type="text" name="Direccion" class="form-control" placeholder="Direccion">
         </div>
         <div class="col-md-12">
           <strong>Zona :</strong>
           <input type="text" name="Zona" class="form-control" placeholder="Zona">
         </div>
         <div class="col-md-12">
+          <strong>Ciudad :</strong>
+          <input type="text" name="Ciudad" class="form-control" placeholder="Ciudad">
+        </div>
+        <div class="col-md-12">
+          <strong>Estado :</strong>
+          <input type="text" name="Estado" class="form-control" placeholder="Estado">
+        </div>
+        
+        <div class="col-md-12">
           <strong>Contacto :</strong>
           <input type="text" name="Contacto" class="form-control" placeholder="Contacto">
         </div>
-        <!--<div class="col-md-12">
-          <strong>Comentarios :</strong>
-          <textarea class="form-control" placeholder="Giro" name="Giro" rows="8" cols="80"></textarea>
-        </div>-->
+        <div class="col-md-12">
+          <strong>Correo :</strong>
+          <input type="text" name="Correo" class="form-control" placeholder="Correo">
+        </div>
 
         <div class="col-md-12">
           <a href="{{route('client.index')}}" class="btn btn-sm btn-success">Regresar</a>
